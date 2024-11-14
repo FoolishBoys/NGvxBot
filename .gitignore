@@ -1,0 +1,8 @@
+# key
+__pycache__
+*CacheFolder
+*.db
+
+# folder
+logs/*
+DBs/*
