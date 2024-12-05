@@ -46,8 +46,8 @@ class MainServer:
             try:
                 msg = self.wcf.get_msg()
                 # 调试专用
-                op(f'[*]: 接收到消息: {msg}')
-                # op(f'[*]: 接收到消息\n[*]: 群聊ID: {msg.roomid}\n[*]: 发送人ID: {msg.sender}\n[*]: 发送内容: {msg.content}\n--------------------')
+                # op(f'[*]: 接收到消息: {msg}')
+                op(f'[*]: \n接收到消息: {msg}\n: 群聊ID: {msg.roomid}\n: 发送人ID: {msg.sender}\n: 发送内容: {msg.content}\n\n--------------------')
                 # 群聊消息处理
                 if '@chatroom' in msg.roomid:
                     Thread(target=self.Rmh.mainHandle, args=(msg,)).start()

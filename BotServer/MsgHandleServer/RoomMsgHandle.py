@@ -28,6 +28,7 @@ class RoomMsgHandle:
         self.Pf = PointFunction(self.wcf)
         self.Af = AdminFunction(self.wcf)
         self.Asf = AdministratorFunction(self.wcf)
+        # TODO: CSY配置获取优化
         configData = Cs.returnConfigData()
         self.Administrators = configData['Administrators']
         self.aiWenKeyWords = configData['functionKeyWord']['aiWenWord']
